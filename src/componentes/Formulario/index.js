@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Botao from '../Botao'
 import CampoTexto from '../CampoTexto'
+// import Colaborador from '../Colaborador'
 import ListaSuspensa from '../ListaSuspensa'
 import './Formulario.css'
 
@@ -27,39 +28,43 @@ const Formulario = (props) => {
             nome,
             cargo,
             imagem,
-            time
+            time,
         })
+        setNome('')
+        setCargo('')
+        setImagem('')
+        // setTime('')
     }
 
     return (
         <section className="formulario">
             <form onSubmit={aoSalvar}>
                 <h2>Preencha os dados para criar o card do colaborador</h2>
-                <CampoTexto 
+                <CampoTexto
                     obrigatorio={true}
                     label="Nome"
-                    placeholder="Digite seu nome" 
+                    placeholder="Digite seu nome"
                     valor={nome}
                     aoAlterado={valor => setNome(valor)}
                 />
                 <CampoTexto
                     obrigatorio={true}
                     label="Cargo"
-                    placeholder="Digite seu cargo" 
+                    placeholder="Digite seu cargo"
                     valor={cargo}
                     aoAlterado={valor => setCargo(valor)}
                 />
                 <CampoTexto
                     label="Imagem"
-                    placeholder="Digite o endereço da imagem" 
+                    placeholder="Digite o endereço da imagem"
                     valor={imagem}
                     aoAlterado={valor => setImagem(valor)}
                 />
                 <ListaSuspensa
                     obrigatorio={true}
-                    label="Time" 
-                    itens={times}
-                    valor={time}
+                    label="Time"
+                    itens={props.times}
+                    valor={times}
                     aoAlterado={valor => setTime(valor)}
                 />
                 <Botao>
