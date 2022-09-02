@@ -18,5 +18,3 @@ export const Footer = () => {
         </footer>
     )
 }
-
-// Importando imagens do footer.

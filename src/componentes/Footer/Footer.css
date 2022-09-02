@@ -23,7 +23,8 @@ footer {
   /* position: absolute; */
   display: inline-flex;
   width: 30;
-  left: 10%;
+  /* left: 10%; */
+  padding: 40px;
   /* background-color: aqua; */
 }
 

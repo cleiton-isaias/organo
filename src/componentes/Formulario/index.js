@@ -33,7 +33,7 @@ const Formulario = (props) => {
         setNome('')
         setCargo('')
         setImagem('')
-        // setTime('')
+        setTime('')
     }
 
     return (
@@ -63,8 +63,8 @@ const Formulario = (props) => {
                 <ListaSuspensa
                     obrigatorio={true}
                     label="Time"
-                    itens={props.times}
-                    valor={times}
+                    itens={times}
+                    valor={time}
                     aoAlterado={valor => setTime(valor)}
                 />
                 <Botao>
