@@ -1,8 +1,15 @@
 .banner {
-    background-color: #6278F7;
-    text-align: center;
+  background-color: #6278f7;
+  text-align: center;
+  display: flex;
 }
 
 .banner img {
-    max-width: 100%;
+  max-width: 100%;
+}
+
+.banner .git {
+  position: absolute;
+  width: 4%;
+  height: 4%;
 }
